@@ -45,7 +45,7 @@ class Logger {
      */
     info(source, msg) {
         let message = colors.info(msg)
-        log(`${source} | ${message}`);
+        log.info(`${source} | ${message}`);
     }
 
     /**
@@ -57,7 +57,7 @@ class Logger {
      */
     warn(source, msg) {
         let message = colors.warn(msg)
-        log(`${source} | ${message}`);
+        log.warn(`${source} | ${message}`);
     }
 
     /**
@@ -69,7 +69,7 @@ class Logger {
      */
     error(source, msg) {
         let message = colors.error(msg)
-        log(`${source} | ${message}`);
+        log.error(`${source} | ${message}`);
     }
 
     /**

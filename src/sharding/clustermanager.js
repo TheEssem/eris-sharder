@@ -436,20 +436,29 @@ class ClusterManager extends EventEmitter {
     }
 
     printLogo() {
-        const logo = require('asciiart-logo');
-        console.log(
-            logo({
-                name: this.name,
-                font: 'Big',
-                lineChars: 15,
-                padding: 5,
-                margin: 2
-            })
-                .emptyLine()
-                .right(`eris-sharder ${pkg.version}`)
-                .emptyLine()
-                .render()
-        );
+        console.log(`
+     ,*\`$                    z\`"v       
+    F zBw\`%                 A ,W "W     
+  ,\` ,EBBBWp"%. ,-=~~==-,+*  4BBE  T    
+  M  BBBBBBBB* ,w=####Wpw  4BBBBB#  1   
+ F  BBBBBBBMwBBBBBBBBBBBBB#wXBBBBBH  E  
+ F  BBBBBBkBBBBBBBBBBBBBBBBBBBBE4BL  k  
+ #  BF\BBBBBBBBBBBBF"      "RBBBW    F  
+  V ' 4BBBBBBBBBBM            TBBL  F   
+   F  BBBBBBBBBBF              JBB  L   
+   F  FBBBBBBBEB                BBL 4   
+   E  [BB4BBBBEBL               BBL 4   
+   I   #BBBBBBBEB              4BBH  *w 
+   A   4BBBBBBBBBEW,         ,BBBB  W  [
+.A  ,k  4BBBBBBBBBBBEBW####BBBBBBM BF  F
+k  <BBBw \BBBBEBBBBBBBBBBBBBBBBBQ4BM  # 
+ 5,  REBBB4BBBBB#BBBBBBBBBBBBP5BFF  ,F  
+   *w  \`*4BBW\`"FF#F##FFFF"\` , *   +"    
+      *+,   " F'"'*^~~~^"^\`  V+*^       
+          \`"""                          
+          
+esmBot, powered by eris-sharder ${pkg.version}
+`);
     }
 
     restartCluster(worker, code, signal) {

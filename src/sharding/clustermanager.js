@@ -457,7 +457,7 @@ k  <BBBw \BBBBEBBBBBBBBBBBBBBBBBQ4BM  #
       *+,   " F'"'*^~~~^"^\`  V+*^       
           \`"""                          
           
-esmBot, powered by eris-sharder ${pkg.version}
+esmBot ${require(process.cwd() + "/package.json").version}, powered by eris-sharder ${pkg.version}
 `);
     }
 

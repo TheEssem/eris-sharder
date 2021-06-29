@@ -278,7 +278,11 @@ class Cluster {
     startStats(bot) {
         setInterval(() => {
             this.guilds = bot.guilds.size;
-            this.users = bot.users.size;
+            let users = 0;
+            for (const [key, value] of bot.guilds) {
+                count += value.memberCount;
+            }
+            this.users = users;
             this.uptime = bot.uptime;
             this.voiceChannels = bot.voiceConnections.size;
             this.largeGuilds = bot.guilds.filter(g => g.large).length;

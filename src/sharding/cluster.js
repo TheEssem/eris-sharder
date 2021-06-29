@@ -280,7 +280,7 @@ class Cluster {
             this.guilds = bot.guilds.size;
             let users = 0;
             for (const [key, value] of bot.guilds) {
-                count += value.memberCount;
+                users += value.memberCount;
             }
             this.users = users;
             this.uptime = bot.uptime;
